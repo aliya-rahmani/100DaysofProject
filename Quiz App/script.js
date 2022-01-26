@@ -31,11 +31,14 @@ const op_c = document.getElementById("op_c");
 const op_d = document.getElementById("op_d");
 const submitBtn = document.getElementById("submit");
 const ansEls = document.querySelectorAll(".answer");
+const quizScore = document.getElementById("quiz_score");
 
 
 let currQue = 0;
+let score = 0;
 quiz();
 function quiz(){
+    clearSelectedOption();
     const question = questions[currQue]; 
     que.innerText = question.que;
     op_a.innerText = question.A;
@@ -62,11 +65,18 @@ function clearSelectedOption(){
 }
 
 submitBtn.addEventListener("click",()=>{
-    currQue++;
-    if(currQue<questions.length) {
-        quiz();
-    }
-    else {
-        alert("Complete");
+    const ans = selectedOption();
+    if(ans){
+        if(ans===questions[currQue].ans){
+            score++;
+        }
+        currQue++;
+        if(currQue<questions.length) {
+            quiz();
+        }
+        else {
+            quizScore.innerHTML = `<h2>Your Score : ${score}/${questions.length}</h2>
+            <button onclick="location.reload()">Reload</button>`;
+        }
     }
 })

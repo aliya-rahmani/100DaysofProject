@@ -55,5 +55,7 @@ button:hover {
     background-color: #4d55f5;
 }
 h2 {
+    padding: 1.2rem;
+    text-align: center;
     margin: 0;
 }

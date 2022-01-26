@@ -5,7 +5,7 @@ const questions = [
         B: "2nd",
         C: "3rd",
         D: "None of the above",
-        ans: "B"
+        ans: "B",
     },
     {
        que: "How many months have 28 days?",
@@ -13,15 +13,55 @@ const questions = [
        B: "1",
        C: "All of them",
        D: "Depends if there's a leap year or not",
-       ans: "D"
+       ans: "D",
     },
     {
-        que: "There are two clocks of different colors: The red clock is broken and doesn't run at all, but the blue clock loses one second every 24 hours. Which clock is more accurate?", 
-        A: "The red clock",
-        B: "The blue clock",
-        C: "Neither",
-        D: "Both", 
-        ans: "B"
+        que: "GFG stands for?",
+        A: "Greatest For Good",
+        B: "Good For Guilt",
+        C: "Geeks For Geeks",
+        D: "Go For God",
+        ans: "C",
+    },
+    {
+        que: "which of these is not a website for coding practice",
+        A: "Leetcode",
+        B: "GFG",
+        C: "Netflix",
+        D: "Code Studio",
+        ans: "C",
+    },
+    {
+        que: "What is the most used programming language in 2019?",
+        A: "Java",
+        B: "C",
+        C: "Python",
+        D: "JavaScript",
+        ans: "D",
+    },
+    {
+        que: "Who is the President of US?",
+        A: "Florin Pop",
+        B: "Donald Trump",
+        C: "Ivan Saldano",
+        D: "Mihai Andrei",
+        ans: "B",
+    },
+    {
+        que: "What does HTML stand for?",
+        A: "Hypertext Markup Language",
+        B: "Cascading Style Sheet",
+        C: "Jason Object Notation",
+        D: "Helicopters Terminals Motorboats Lamborginis",
+        ans: "A",
+    },
+    {
+        que: "What year was JavaScript launched?",
+        A: "1996",
+        B: "1995",
+        C: "1994",
+        D: "none of the above",
+        ans: "B",
     },
 ];
 const que = document.getElementById("id_que");

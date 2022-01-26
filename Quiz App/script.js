@@ -29,6 +29,8 @@ const op_a = document.getElementById("op_a");
 const op_b = document.getElementById("op_b");
 const op_c = document.getElementById("op_c");
 const op_d = document.getElementById("op_d");
+const submitBtn = document.getElementById("submit");
+const ansEls = document.querySelectorAll(".answer");
 
 
 let currQue = 0;
@@ -40,5 +42,31 @@ function quiz(){
     op_b.innerText = question.B;
     op_c.innerText = question.C;
     op_d.innerText = question.D;
-    currQue++;
+    
 }
+
+function selectedOption(){
+    let ans = undefined;
+    ansEls.forEach((ansEl)=>{
+        if(ansEl.checked){
+            ans = ansEl.id;
+        }
+    });
+    return ans;
+}
+
+function clearSelectedOption(){
+    ansEls.forEach((ansEl)=>{
+        ansEl.checked=false;
+    });
+}
+
+submitBtn.addEventListener("click",()=>{
+    currQue++;
+    if(currQue<questions.length) {
+        quiz();
+    }
+    else {
+        alert("Complete");
+    }
+})

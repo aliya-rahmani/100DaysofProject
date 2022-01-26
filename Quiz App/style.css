@@ -11,10 +11,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 .quiz-card {
     background-color: white;
-    width: 500px;
+    width: 600px;
     border-radius: 10px;
     box-shadow: 0 0 10px 5px rgba(400, 100, 50, 0.2);
     max-width: 100%;
@@ -33,6 +34,9 @@ ul {
 ul li {
     margin: 1rem 0;
     font-size: 1.2rem;
+}
+ul li label {
+    cursor: pointer;
 }
 button {
     background-color: #3742fa;
